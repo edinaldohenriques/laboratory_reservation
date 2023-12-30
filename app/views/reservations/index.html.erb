@@ -1,0 +1,46 @@
+<h1>Reserva de Laboratório</h1>
+<table class="table table-bordered border-primary">
+  <thead>
+    <tr>
+      <th scope="col" id="n-reservation">Nº de Reservas</th>
+      <th scope="col">Data</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Reservante</th>
+      <% if policy(:user).index? %>
+        <th scope="col" class="table-actions-col">Ações</th> 
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reservations.each_with_index do |reservation, index| %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+
+        <td><%= reservation.reservation_date %></td>
+
+        <td><%= reservation.reservation_type %></td>
+      
+        <td><%= reservation.user.name%></td>
+
+        <% if policy(:reservation).edit? %>
+          <td class="table-actions-col">
+            <%= link_to edit_reservation_path(reservation), class: 'text-decoration-none' do %>
+              <i class="bi bi-pencil-square"></i>
+            <% end %>
+        <% end %>  
+        <% if policy(:reservation).destroy? %>  
+            <%= link_to reservation_path(reservation), method: :delete, data: { confirm: 'Tem certeza que deseja excluir?' } do %>
+              <i class="bi bi-trash-fill"></i>         
+            <% end %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>  
+  </tbody>
+</table>
+<% if policy(:user).create? %>
+  <div id="button-reservation">
+    <button class="register-button"><%= link_to 'Cadastrar nova Reserva', new_reservation_path, class: 'register-link' %></button>
+    <button class="register-button"><%= link_to 'Cadastrar Reservante', new_user_registration_path, class: 'register-link' %></button>
+  </div>
+<% end %>

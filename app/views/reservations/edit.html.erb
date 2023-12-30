@@ -1,0 +1,19 @@
+<h1>Editar Reserva</h1>
+<div class="row" id="new">
+  <div>
+    <%= form_for @reservation do |f| %>
+    
+    <%= render 'form', f: f %>
+
+    <div>
+      <%= f.submit 'Atualizar', class: 'btn btn-success' %>
+    </div>
+
+    <% end %>
+
+    <div class="back-button">
+      <%= link_to 'Voltar', root_path, class: 'btn btn-success'%>
+    </div>
+    
+  </div>
+</div>

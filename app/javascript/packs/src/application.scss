@@ -1,0 +1,39 @@
+@import "~bootstrap/scss/bootstrap";
+
+table {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;  
+  height: 100px;
+  margin-top: 2cm; // Difini a margin da altura
+  line-height: 50px;
+}
+
+#n-reservation {
+  max-width: 40px;
+}
+#acoes {
+  max-width: 30px;
+}
+.bi-pencil-square {
+  margin-right: 20px;
+}
+
+.table-actions-col {
+  width: 50px; /* Defina a largura desejada para a coluna de ações */
+  white-space: nowrap; /* Evita que o conteúdo seja quebrado em várias linhas */
+}
+
+.table-actions-col i {
+  margin-right: 40px; /* Adicione um espaçamento entre os ícones, se desejado */
+}
+
+.dropdown {
+  text-align: end;
+  margin-right: 160px;
+  margin-top: 10px;
+
+  .dropdown-menu {
+    text-align: end;
+  }
+}

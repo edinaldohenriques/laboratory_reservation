@@ -6,7 +6,7 @@
       <th scope="col">Data</th>
       <th scope="col">Tipo</th>
       <th scope="col">Reservante</th>
-      <% if policy(:user).index? %>
+      <% if policy(:user).edit? || policy(:user).destroy? %>
         <th scope="col" class="table-actions-col">Ações</th> 
       <% end %>
     </tr>

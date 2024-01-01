@@ -125,6 +125,7 @@ pt-BR:
         sign_in: Login
       signed_in: Login efetuado com sucesso.
       signed_out: Logout efetuado com sucesso.
+      logout: Sair
     shared:
       links:
         back: Voltar

@@ -42,7 +42,11 @@ pt-BR:
         taken: 'já cadastrado'
         confirmation: 'não é igual. Insira a mesma senha.'
         too_long: 'muito grande. Máximo de %{count} caracteres'
-        too_short: 'muito curta. Mínimo de %{count} caracteres'        
+        too_short: 'muito curta. Mínimo de %{count} caracteres'
+        in: deve estar em %{count}
+        wrong_length:
+          one: não possui o tamanho esperado (%{count} caracter)
+          other: não possui o tamanho esperado (%{count} caracteres)        
   devise:
     confirmations:
       confirmed: A sua conta foi confirmada com sucesso.

@@ -43,6 +43,10 @@ en:
         confirmation: "Não é o mesmo. Digite a mesma senha."
         too_long: "very large. Maximum %{count} characters"
         too_short: "too short. Minimum %{count} characters"
+        in: must be in %{count}
+        wrong_length:
+          one: is the wrong length (should be %{count} character)
+          other: is the wrong length (should be %{count} characters)
   devise:
     confirmations:
       confirmed: Your email address has been successfully confirmed.

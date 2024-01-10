@@ -6,7 +6,7 @@ class Reservation < ApplicationRecord
   validates :reservation_date, presence: true
   validates :reservation_type, presence: true
 
-  def number_laboratorio 
+  def number_laboratorio
     self.class.laboratorio.count
   end
 
